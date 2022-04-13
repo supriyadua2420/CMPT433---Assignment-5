@@ -464,487 +464,490 @@ LOAD /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-n
  .text          0x80000000       0xbc /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
                 0x80000000                Entry
 
-.text           0x800000bc     0x3318
+.text           0x800000bc     0x3470
                 0x800000bc                . = ALIGN (0x4)
  *(.text*)
  .text.serialRxIsrCallback
                 0x800000bc       0x30 Debug/main.o
  .text.doBackgroundSerialWork
                 0x800000ec       0xcc Debug/main.o
- .text.main     0x800001b8       0xb8 Debug/main.o
-                0x800001b8                main
+ .text.get_reset_source
+                0x800001b8      0x100 Debug/main.o
+                0x800001b8                get_reset_source
+ .text.main     0x800002b8       0xc4 Debug/main.o
+                0x800002b8                main
  .text.Serial_init
-                0x80000270       0xdc Debug/serial.o
-                0x80000270                Serial_init
+                0x8000037c       0xdc Debug/serial.o
+                0x8000037c                Serial_init
  .text.Serial_setRxIsrCallback
-                0x8000034c       0x2c Debug/serial.o
-                0x8000034c                Serial_setRxIsrCallback
+                0x80000458       0x2c Debug/serial.o
+                0x80000458                Serial_setRxIsrCallback
  .text.UartBaudRateSet
-                0x80000378       0x5c Debug/serial.o
+                0x80000484       0x5c Debug/serial.o
  .text.UartInterruptEnable
-                0x800003d4       0x7c Debug/serial.o
- .text.UARTIsr  0x80000450       0xc8 Debug/serial.o
+                0x800004e0       0x7c Debug/serial.o
+ .text.UARTIsr  0x8000055c       0xc8 Debug/serial.o
  .text.Timer_init
-                0x80000518       0x7c Debug/time.o
-                0x80000518                Timer_init
+                0x80000624       0x7c Debug/time.o
+                0x80000624                Timer_init
  .text.Timer_isIsrFlagSet
-                0x80000594       0x28 Debug/time.o
-                0x80000594                Timer_isIsrFlagSet
+                0x800006a0       0x28 Debug/time.o
+                0x800006a0                Timer_isIsrFlagSet
  .text.Timer_clearIsrFlag
-                0x800005bc       0x24 Debug/time.o
-                0x800005bc                Timer_clearIsrFlag
+                0x800006c8       0x24 Debug/time.o
+                0x800006c8                Timer_clearIsrFlag
  .text.DMTimerIsr
-                0x800005e0       0x88 Debug/time.o
+                0x800006ec       0x88 Debug/time.o
  .text.DMTimerAintcConfigure
-                0x80000668       0x4c Debug/time.o
+                0x80000774       0x4c Debug/time.o
  .text.DMTimerSetUp
-                0x800006b4       0x5c Debug/time.o
+                0x800007c0       0x5c Debug/time.o
  .text.Watchdog_init
-                0x80000710       0x84 Debug/watchdog_timer.o
-                0x80000710                Watchdog_init
+                0x8000081c       0x84 Debug/watchdog_timer.o
+                0x8000081c                Watchdog_init
  .text.Watchdog_hit
-                0x80000794       0x4c Debug/watchdog_timer.o
-                0x80000794                Watchdog_hit
+                0x800008a0       0x4c Debug/watchdog_timer.o
+                0x800008a0                Watchdog_hit
  .text.DMTimerEnable
-                0x800007e0       0x6c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
-                0x800007e0                DMTimerEnable
+                0x800008ec       0x6c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+                0x800008ec                DMTimerEnable
  .text.DMTimerModeConfigure
-                0x8000084c       0xcc /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
-                0x8000084c                DMTimerModeConfigure
+                0x80000958       0xcc /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+                0x80000958                DMTimerModeConfigure
  .text.DMTimerPreScalerClkDisable
-                0x80000918       0x6c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
-                0x80000918                DMTimerPreScalerClkDisable
+                0x80000a24       0x6c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+                0x80000a24                DMTimerPreScalerClkDisable
  .text.DMTimerCounterSet
-                0x80000984       0x64 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
-                0x80000984                DMTimerCounterSet
+                0x80000a90       0x64 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+                0x80000a90                DMTimerCounterSet
  .text.DMTimerReloadSet
-                0x800009e8       0x64 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
-                0x800009e8                DMTimerReloadSet
+                0x80000af4       0x64 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+                0x80000af4                DMTimerReloadSet
  .text.DMTimerIntStatusClear
-                0x80000a4c       0x34 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
-                0x80000a4c                DMTimerIntStatusClear
+                0x80000b58       0x34 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+                0x80000b58                DMTimerIntStatusClear
  .text.DMTimerIntEnable
-                0x80000a80       0x34 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
-                0x80000a80                DMTimerIntEnable
+                0x80000b8c       0x34 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+                0x80000b8c                DMTimerIntEnable
  .text.DMTimerIntDisable
-                0x80000ab4       0x34 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
-                0x80000ab4                DMTimerIntDisable
+                0x80000bc0       0x34 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+                0x80000bc0                DMTimerIntDisable
  .text.DMTimerWritePostedStatusGet
-                0x80000ae8       0x2c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
-                0x80000ae8                DMTimerWritePostedStatusGet
+                0x80000bf4       0x2c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+                0x80000bf4                DMTimerWritePostedStatusGet
  .text.UARTOperatingModeSelect
-                0x80000b14       0x84 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x80000b14                UARTOperatingModeSelect
+                0x80000c20       0x84 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80000c20                UARTOperatingModeSelect
  .text.UARTDivisorValCompute
-                0x80000b98      0x104 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x80000b98                UARTDivisorValCompute
+                0x80000ca4      0x104 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80000ca4                UARTDivisorValCompute
  .text.UARTDivisorLatchWrite
-                0x80000c9c      0x210 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x80000c9c                UARTDivisorLatchWrite
+                0x80000da8      0x210 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80000da8                UARTDivisorLatchWrite
  .text.UARTDivisorLatchDisable
-                0x80000eac       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x80000eac                UARTDivisorLatchDisable
+                0x80000fb8       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80000fb8                UARTDivisorLatchDisable
  .text.UARTRegConfigModeEnable
-                0x80000ee4       0x9c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x80000ee4                UARTRegConfigModeEnable
+                0x80000ff0       0x9c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80000ff0                UARTRegConfigModeEnable
  .text.UARTBreakCtl
-                0x80000f80       0x60 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x80000f80                UARTBreakCtl
+                0x8000108c       0x60 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x8000108c                UARTBreakCtl
  .text.UARTLineCharacConfig
-                0x80000fe0       0xa4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x80000fe0                UARTLineCharacConfig
+                0x800010ec       0xa4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x800010ec                UARTLineCharacConfig
  .text.UARTIntEnable
-                0x80001084      0x130 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x80001084                UARTIntEnable
+                0x80001190      0x130 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80001190                UARTIntEnable
  .text.UARTCharPutNonBlocking
-                0x800011b4       0x8c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x800011b4                UARTCharPutNonBlocking
+                0x800012c0       0x8c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x800012c0                UARTCharPutNonBlocking
  .text.UARTCharGetNonBlocking
-                0x80001240       0x80 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x80001240                UARTCharGetNonBlocking
+                0x8000134c       0x80 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x8000134c                UARTCharGetNonBlocking
  .text.UARTCharPut
-                0x800012c0       0x78 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x800012c0                UARTCharPut
+                0x800013cc       0x78 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x800013cc                UARTCharPut
  .text.UARTIntIdentityGet
-                0x80001338       0x6c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x80001338                UARTIntIdentityGet
+                0x80001444       0x6c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x80001444                UARTIntIdentityGet
  .text.UARTModuleReset
-                0x800013a4       0x54 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
-                0x800013a4                UARTModuleReset
+                0x800014b0       0x54 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x800014b0                UARTModuleReset
  .text.WatchdogTimerEnable
-                0x800013f8       0x80 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
-                0x800013f8                WatchdogTimerEnable
+                0x80001504       0x80 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+                0x80001504                WatchdogTimerEnable
  .text.WatchdogTimerDisable
-                0x80001478       0x80 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
-                0x80001478                WatchdogTimerDisable
+                0x80001584       0x80 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+                0x80001584                WatchdogTimerDisable
  .text.WatchdogTimerReset
-                0x800014f8       0x54 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
-                0x800014f8                WatchdogTimerReset
+                0x80001604       0x54 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+                0x80001604                WatchdogTimerReset
  .text.WatchdogTimerPreScalerClkDisable
-                0x8000154c       0x58 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
-                0x8000154c                WatchdogTimerPreScalerClkDisable
+                0x80001658       0x58 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+                0x80001658                WatchdogTimerPreScalerClkDisable
  .text.WatchdogTimerReloadSet
-                0x800015a4       0x50 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
-                0x800015a4                WatchdogTimerReloadSet
+                0x800016b0       0x50 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+                0x800016b0                WatchdogTimerReloadSet
  .text.WatchdogTimerTriggerSet
-                0x800015f4       0x50 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
-                0x800015f4                WatchdogTimerTriggerSet
+                0x80001700       0x50 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+                0x80001700                WatchdogTimerTriggerSet
  .text.WatchdogTimerWritePostedStatusGet
-                0x80001644       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
-                0x80001644                WatchdogTimerWritePostedStatusGet
+                0x80001750       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+                0x80001750                WatchdogTimerWritePostedStatusGet
  .text.ConsoleUtilsSetType
-                0x8000167c       0x54 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
-                0x8000167c                ConsoleUtilsSetType
+                0x80001788       0x54 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+                0x80001788                ConsoleUtilsSetType
  .text.ConsoleUtilsPrintf
-                0x800016d0       0x6c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
-                0x800016d0                ConsoleUtilsPrintf
+                0x800017dc       0x6c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+                0x800017dc                ConsoleUtilsPrintf
  .text.UARTPuts
-                0x8000173c       0xec /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
-                0x8000173c                UARTPuts
+                0x80001848       0xec /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x80001848                UARTPuts
  .text.UARTPutc
-                0x80001828       0x30 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
-                0x80001828                UARTPutc
+                0x80001934       0x30 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x80001934                UARTPutc
  .text.UARTwrite
-                0x80001858       0x94 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
-                0x80001858                UARTwrite
+                0x80001964       0x94 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x80001964                UARTwrite
  .text.UARTPrintf
-                0x800018ec      0x6ac /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
-                0x800018ec                UARTPrintf
+                0x800019f8      0x6ac /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x800019f8                UARTPrintf
  .text.DMTimer2ModuleClkConfig
-                0x80001f98      0x260 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
-                0x80001f98                DMTimer2ModuleClkConfig
+                0x800020a4      0x260 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
+                0x800020a4                DMTimer2ModuleClkConfig
  .text.UARTPinMuxSetup
-                0x800021f8       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
-                0x800021f8                UARTPinMuxSetup
+                0x80002304       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
+                0x80002304                UARTPinMuxSetup
  .text.UART0ModuleClkConfig
-                0x80002240      0x35c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
-                0x80002240                UART0ModuleClkConfig
+                0x8000234c      0x35c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
+                0x8000234c                UART0ModuleClkConfig
  .text.UARTConsolePutc
-                0x8000259c       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
-                0x8000259c                UARTConsolePutc
+                0x800026a8       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
+                0x800026a8                UARTConsolePutc
  .text.WatchdogTimer1ModuleClkConfig
-                0x800025d4      0x248 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
-                0x800025d4                WatchdogTimer1ModuleClkConfig
+                0x800026e0      0x248 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
+                0x800026e0                WatchdogTimer1ModuleClkConfig
  .text.IntDefaultHandler
-                0x8000281c       0x14 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x80002928       0x14 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
  .text.IntRegister
-                0x80002830       0x34 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
-                0x80002830                IntRegister
+                0x8000293c       0x34 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x8000293c                IntRegister
  .text.IntAINTCInit
-                0x80002864       0x90 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
-                0x80002864                IntAINTCInit
+                0x80002970       0x90 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x80002970                IntAINTCInit
  .text.IntPrioritySet
-                0x800028f4       0x50 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
-                0x800028f4                IntPrioritySet
+                0x80002a00       0x50 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x80002a00                IntPrioritySet
  .text.IntSystemEnable
-                0x80002944       0x4c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
-                0x80002944                IntSystemEnable
+                0x80002a50       0x4c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x80002a50                IntSystemEnable
  .text.IntMasterIRQEnable
-                0x80002990       0x18 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
-                0x80002990                IntMasterIRQEnable
+                0x80002a9c       0x18 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x80002a9c                IntMasterIRQEnable
  .text.start_boot
-                0x800029a8       0x24 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
-                0x800029a8                start_boot
+                0x80002ab4       0x24 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+                0x80002ab4                start_boot
  .text.CopyVectorTable
-                0x800029cc       0x98 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
- .text          0x80002a64      0x488 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
-                0x80002a64                CP15ICacheDisable
-                0x80002a80                CP15DCacheDisable
-                0x80002a9c                CP15ICacheEnable
-                0x80002aac                CP15DCacheEnable
-                0x80002abc                CP15DCacheFlush
-                0x80002b50                CP15DCacheClean
-                0x80002be4                CP15DCacheCleanFlush
-                0x80002c78                CP15ICacheFlush
-                0x80002c88                CP15DCacheCleanBuff
-                0x80002cdc                CP15DCacheCleanFlushBuff
-                0x80002d30                CP15DCacheFlushBuff
-                0x80002d94                CP15ICacheFlushBuff
-                0x80002de8                CP15Ttb0Set
-                0x80002df4                CP15TlbInvalidate
-                0x80002e00                CP15MMUDisable
-                0x80002e18                CP15MMUEnable
-                0x80002e2c                CP15VectorBaseAddrSet
-                0x80002e38                CP15BranchPredictorInvalidate
-                0x80002e44                CP15BranchPredictionEnable
-                0x80002e54                CP15BranchPredictionDisable
-                0x80002e64                CP15DomainAccessClientSet
-                0x80002e74                CP15ControlFeatureDisable
-                0x80002e88                CP15ControlFeatureEnable
-                0x80002e9c                CP15TtbCtlTtb0Config
-                0x80002eac                CP15AuxControlFeatureEnable
-                0x80002ec0                CP15AuxControlFeatureDisable
-                0x80002ed4                CP15MainIdPrimPartNumGet
- .text.CPUirqe  0x80002eec       0x24 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
-                0x80002eec                CPUirqe
- .text          0x80002f10       0xf0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
-                0x80002f10                SVC_Handler
-                0x80002f38                IRQHandler
-                0x80002fe4                FIQHandler
-                0x80002fe8                UndefInstHandler
-                0x80002fe8                AbortHandler
- .text          0x80003000      0x114 /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
-                0x80003000                __udivsi3
-                0x80003000                __aeabi_uidiv
-                0x800030f4                __aeabi_uidivmod
- .text          0x80003114      0x148 /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
-                0x80003114                __aeabi_idiv
-                0x80003114                __divsi3
-                0x8000323c                __aeabi_idivmod
- .text          0x8000325c        0x4 /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
-                0x8000325c                __aeabi_ldiv0
-                0x8000325c                __aeabi_idiv0
+                0x80002ad8       0x98 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .text          0x80002b70      0x488 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+                0x80002b70                CP15ICacheDisable
+                0x80002b8c                CP15DCacheDisable
+                0x80002ba8                CP15ICacheEnable
+                0x80002bb8                CP15DCacheEnable
+                0x80002bc8                CP15DCacheFlush
+                0x80002c5c                CP15DCacheClean
+                0x80002cf0                CP15DCacheCleanFlush
+                0x80002d84                CP15ICacheFlush
+                0x80002d94                CP15DCacheCleanBuff
+                0x80002de8                CP15DCacheCleanFlushBuff
+                0x80002e3c                CP15DCacheFlushBuff
+                0x80002ea0                CP15ICacheFlushBuff
+                0x80002ef4                CP15Ttb0Set
+                0x80002f00                CP15TlbInvalidate
+                0x80002f0c                CP15MMUDisable
+                0x80002f24                CP15MMUEnable
+                0x80002f38                CP15VectorBaseAddrSet
+                0x80002f44                CP15BranchPredictorInvalidate
+                0x80002f50                CP15BranchPredictionEnable
+                0x80002f60                CP15BranchPredictionDisable
+                0x80002f70                CP15DomainAccessClientSet
+                0x80002f80                CP15ControlFeatureDisable
+                0x80002f94                CP15ControlFeatureEnable
+                0x80002fa8                CP15TtbCtlTtb0Config
+                0x80002fb8                CP15AuxControlFeatureEnable
+                0x80002fcc                CP15AuxControlFeatureDisable
+                0x80002fe0                CP15MainIdPrimPartNumGet
+ .text.CPUirqe  0x80002ff8       0x24 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+                0x80002ff8                CPUirqe
+ .text          0x8000301c       0xf0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+                0x8000301c                SVC_Handler
+                0x80003044                IRQHandler
+                0x800030f0                FIQHandler
+                0x800030f4                UndefInstHandler
+                0x800030f4                AbortHandler
+ .text          0x8000310c      0x114 /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+                0x8000310c                __udivsi3
+                0x8000310c                __aeabi_uidiv
+                0x80003200                __aeabi_uidivmod
+ .text          0x80003220      0x148 /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+                0x80003220                __aeabi_idiv
+                0x80003220                __divsi3
+                0x80003348                __aeabi_idivmod
+ .text          0x80003368        0x4 /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
+                0x80003368                __aeabi_ldiv0
+                0x80003368                __aeabi_idiv0
  *(.rodata*)
- .rodata        0x80003260       0x84 Debug/main.o
- .rodata        0x800032e4       0x50 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
- .rodata        0x80003334       0x60 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .rodata        0x8000336c       0xd0 Debug/main.o
+ .rodata        0x8000343c       0x50 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .rodata        0x8000348c       0x60 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
  .rodata.g_pcHex
-                0x80003394        0x4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x800034ec        0x4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
  .rodata.AM335X_VECTOR_BASE
-                0x80003398        0x4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
-                0x80003398                AM335X_VECTOR_BASE
+                0x800034f0        0x4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+                0x800034f0                AM335X_VECTOR_BASE
  .rodata.vecTbl
-                0x8000339c       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+                0x800034f4       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
 
-.glue_7         0x800033d4        0x0
+.glue_7         0x8000352c        0x0
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x800033d4        0x0
+.glue_7t        0x8000352c        0x0
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x800033d4        0x0
+.vfp11_veneer   0x8000352c        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x800033d4        0x0
+.v4_bx          0x8000352c        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x800033d4        0x0
+.iplt           0x8000352c        0x0
  .iplt          0x00000000        0x0 Debug/main.o
 
-.rel.dyn        0x800033d4        0x0
+.rel.dyn        0x8000352c        0x0
  .rel.iplt      0x00000000        0x0 Debug/main.o
 
-.data           0x800033d4        0x0
-                0x800033d4                . = ALIGN (0x4)
+.data           0x8000352c        0x0
+                0x8000352c                . = ALIGN (0x4)
  *(.data*)
 
-.igot.plt       0x800033d4        0x0
+.igot.plt       0x8000352c        0x0
  .igot.plt      0x00000000        0x0 Debug/main.o
 
-.bss            0x800033d4      0x218
-                0x800033d4                . = ALIGN (0x4)
-                0x800033d4                _bss_start = .
+.bss            0x8000352c      0x218
+                0x8000352c                . = ALIGN (0x4)
+                0x8000352c                _bss_start = .
  *(.bss*)
- .bss.s_rxByte  0x800033d4        0x1 Debug/main.o
- *fill*         0x800033d5        0x3 00
+ .bss.s_rxByte  0x8000352c        0x1 Debug/main.o
+ *fill*         0x8000352d        0x3 00
  .bss.g_rxIsrCallback
-                0x800033d8        0x4 Debug/serial.o
+                0x80003530        0x4 Debug/serial.o
  .bss.s_flagIsr
-                0x800033dc        0x1 Debug/time.o
- *fill*         0x800033dd        0x3 00
+                0x80003534        0x1 Debug/time.o
+ *fill*         0x80003535        0x3 00
  .bss.s_isrCallback
-                0x800033e0        0x4 Debug/time.o
+                0x80003538        0x4 Debug/time.o
  .bss.triggerCounter.4167
-                0x800033e4        0x4 Debug/watchdog_timer.o
+                0x8000353c        0x4 Debug/watchdog_timer.o
  .bss.ConsoleType
-                0x800033e8        0x1 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+                0x80003540        0x1 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
  *(COMMON)
- *fill*         0x800033e9        0x3 00
- COMMON         0x800033ec      0x200 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
-                0x800033ec                fnRAMVectors
-                0x800035ec                _bss_end = .
+ *fill*         0x80003541        0x3 00
+ COMMON         0x80003544      0x200 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x80003544                fnRAMVectors
+                0x80003744                _bss_end = .
 
-.heap           0x800035ec      0x800
-                0x800035ec                . = ALIGN (0x4)
-                0x800035ec                __end__ = .
-                0x800035ec                end = __end__
-                0x800035ec                __HeapBase = __end__
+.heap           0x80003744      0x800
+                0x80003744                . = ALIGN (0x4)
+                0x80003744                __end__ = .
+                0x80003744                end = __end__
+                0x80003744                __HeapBase = __end__
  *(.heap*)
-                0x80003dec                . = (. + 0x800)
- *fill*         0x800035ec      0x800 00
-                0x80003dec                __HeapLimit = .
+                0x80003f44                . = (. + 0x800)
+ *fill*         0x80003744      0x800 00
+                0x80003f44                __HeapLimit = .
 
-.stack          0x80003dec  0x7fffff8
-                0x80003dec                . = ALIGN (0x4)
-                0x80003dec                __StackLimit = .
+.stack          0x80003f44  0x7fffff8
+                0x80003f44                . = ALIGN (0x4)
+                0x80003f44                __StackLimit = .
  *(.stack*)
-                0x88003de4                . = (. + 0x7fffff8)
- *fill*         0x80003dec  0x7fffff8 00
-                0x88003de4                __StackTop = .
-                0x88003de4                _stack = __StackTop
+                0x88003f3c                . = (. + 0x7fffff8)
+ *fill*         0x80003f44  0x7fffff8 00
+                0x88003f3c                __StackTop = .
+                0x88003f3c                _stack = __StackTop
 OUTPUT(Debug/lightBouncer.out elf32-littlearm)
 
-.debug_info     0x00000000     0x3782
- .debug_info    0x00000000       0xe8 Debug/main.o
- .debug_info    0x000000e8      0x180 Debug/serial.o
- .debug_info    0x00000268      0x123 Debug/time.o
- .debug_info    0x0000038b       0x7d Debug/watchdog_timer.o
- .debug_info    0x00000408      0x5d0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
- .debug_info    0x000009d8     0x14ab /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
- .debug_info    0x00001e83      0x45c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
- .debug_info    0x000022df      0x29a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
- .debug_info    0x00002579      0x69a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
- .debug_info    0x00002c13       0xd3 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
- .debug_info    0x00002ce6       0x7e /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
- .debug_info    0x00002d64      0x156 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
- .debug_info    0x00002eba       0x55 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
- .debug_info    0x00002f0f       0xb3 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
- .debug_info    0x00002fc2      0x46f /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
- .debug_info    0x00003431       0xe0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
- .debug_info    0x00003511       0xb3 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
- .debug_info    0x000035c4       0xf8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
- .debug_info    0x000036bc       0xc6 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+.debug_info     0x00000000     0x37ab
+ .debug_info    0x00000000      0x111 Debug/main.o
+ .debug_info    0x00000111      0x180 Debug/serial.o
+ .debug_info    0x00000291      0x123 Debug/time.o
+ .debug_info    0x000003b4       0x7d Debug/watchdog_timer.o
+ .debug_info    0x00000431      0x5d0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+ .debug_info    0x00000a01     0x14ab /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_info    0x00001eac      0x45c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+ .debug_info    0x00002308      0x29a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_info    0x000025a2      0x69a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_info    0x00002c3c       0xd3 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
+ .debug_info    0x00002d0f       0x7e /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
+ .debug_info    0x00002d8d      0x156 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_info    0x00002ee3       0x55 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
+ .debug_info    0x00002f38       0xb3 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+ .debug_info    0x00002feb      0x46f /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_info    0x0000345a       0xe0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_info    0x0000353a       0xb3 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+ .debug_info    0x000035ed       0xf8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_info    0x000036e5       0xc6 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
 
-.debug_abbrev   0x00000000      0xdd9
- .debug_abbrev  0x00000000       0xa6 Debug/main.o
- .debug_abbrev  0x000000a6       0xf1 Debug/serial.o
- .debug_abbrev  0x00000197       0xd0 Debug/time.o
- .debug_abbrev  0x00000267       0x60 Debug/watchdog_timer.o
- .debug_abbrev  0x000002c7      0x122 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
- .debug_abbrev  0x000003e9      0x14e /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
- .debug_abbrev  0x00000537      0x108 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
- .debug_abbrev  0x0000063f      0x156 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
- .debug_abbrev  0x00000795      0x186 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
- .debug_abbrev  0x0000091b       0x7a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
- .debug_abbrev  0x00000995       0x62 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
- .debug_abbrev  0x000009f7       0xa3 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
- .debug_abbrev  0x00000a9a       0x39 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
- .debug_abbrev  0x00000ad3       0x14 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
- .debug_abbrev  0x00000ae7      0x1c2 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
- .debug_abbrev  0x00000ca9       0xa4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
- .debug_abbrev  0x00000d4d       0x14 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
- .debug_abbrev  0x00000d61       0x64 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
- .debug_abbrev  0x00000dc5       0x14 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+.debug_abbrev   0x00000000      0xdf3
+ .debug_abbrev  0x00000000       0xc0 Debug/main.o
+ .debug_abbrev  0x000000c0       0xf1 Debug/serial.o
+ .debug_abbrev  0x000001b1       0xd0 Debug/time.o
+ .debug_abbrev  0x00000281       0x60 Debug/watchdog_timer.o
+ .debug_abbrev  0x000002e1      0x122 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+ .debug_abbrev  0x00000403      0x14e /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_abbrev  0x00000551      0x108 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+ .debug_abbrev  0x00000659      0x156 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_abbrev  0x000007af      0x186 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_abbrev  0x00000935       0x7a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
+ .debug_abbrev  0x000009af       0x62 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
+ .debug_abbrev  0x00000a11       0xa3 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_abbrev  0x00000ab4       0x39 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
+ .debug_abbrev  0x00000aed       0x14 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+ .debug_abbrev  0x00000b01      0x1c2 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_abbrev  0x00000cc3       0xa4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_abbrev  0x00000d67       0x14 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+ .debug_abbrev  0x00000d7b       0x64 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_abbrev  0x00000ddf       0x14 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
 
-.debug_loc      0x00000000     0x2544
- .debug_loc     0x00000000       0x84 Debug/main.o
- .debug_loc     0x00000084       0xdc Debug/serial.o
- .debug_loc     0x00000160      0x134 Debug/time.o
- .debug_loc     0x00000294       0x58 Debug/watchdog_timer.o
- .debug_loc     0x000002ec      0x478 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
- .debug_loc     0x00000764      0xcb8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
- .debug_loc     0x0000141c      0x39c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
- .debug_loc     0x000017b8      0x178 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
- .debug_loc     0x00001930      0x274 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
- .debug_loc     0x00001ba4      0x108 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
- .debug_loc     0x00001cac       0x58 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
- .debug_loc     0x00001d04      0x108 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
- .debug_loc     0x00001e0c       0x2c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
- .debug_loc     0x00001e38      0x554 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
- .debug_loc     0x0000238c       0x58 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
- .debug_loc     0x000023e4      0x160 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+.debug_loc      0x00000000     0x2570
+ .debug_loc     0x00000000       0xb0 Debug/main.o
+ .debug_loc     0x000000b0       0xdc Debug/serial.o
+ .debug_loc     0x0000018c      0x134 Debug/time.o
+ .debug_loc     0x000002c0       0x58 Debug/watchdog_timer.o
+ .debug_loc     0x00000318      0x478 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+ .debug_loc     0x00000790      0xcb8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_loc     0x00001448      0x39c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+ .debug_loc     0x000017e4      0x178 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_loc     0x0000195c      0x274 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_loc     0x00001bd0      0x108 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
+ .debug_loc     0x00001cd8       0x58 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
+ .debug_loc     0x00001d30      0x108 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_loc     0x00001e38       0x2c /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
+ .debug_loc     0x00001e64      0x554 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_loc     0x000023b8       0x58 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_loc     0x00002410      0x160 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
 
-.debug_aranges  0x00000000      0x8a0
+.debug_aranges  0x00000000      0x8a8
  .debug_aranges
-                0x00000000       0x30 Debug/main.o
+                0x00000000       0x38 Debug/main.o
  .debug_aranges
-                0x00000030       0x40 Debug/serial.o
+                0x00000038       0x40 Debug/serial.o
  .debug_aranges
-                0x00000070       0x50 Debug/time.o
+                0x00000078       0x50 Debug/time.o
  .debug_aranges
-                0x000000c0       0x28 Debug/watchdog_timer.o
+                0x000000c8       0x28 Debug/watchdog_timer.o
  .debug_aranges
-                0x000000e8       0xe8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+                0x000000f0       0xe8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
  .debug_aranges
-                0x000001d0      0x268 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+                0x000001d8      0x268 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
  .debug_aranges
-                0x00000438       0xc0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+                0x00000440       0xc0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
  .debug_aranges
-                0x000004f8       0x58 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+                0x00000500       0x58 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
  .debug_aranges
-                0x00000550       0x88 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+                0x00000558       0x88 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
  .debug_aranges
-                0x000005d8       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
+                0x000005e0       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
  .debug_aranges
-                0x00000620       0x28 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
+                0x00000628       0x28 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
  .debug_aranges
-                0x00000648       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
+                0x00000650       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
  .debug_aranges
-                0x00000690       0x20 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
+                0x00000698       0x20 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
  .debug_aranges
-                0x000006b0       0x20 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+                0x000006b8       0x20 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
  .debug_aranges
-                0x000006d0      0x110 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+                0x000006d8      0x110 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
  .debug_aranges
-                0x000007e0       0x28 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+                0x000007e8       0x28 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
  .debug_aranges
-                0x00000808       0x20 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+                0x00000810       0x20 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
  .debug_aranges
-                0x00000828       0x58 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+                0x00000830       0x58 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
  .debug_aranges
-                0x00000880       0x20 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+                0x00000888       0x20 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
 
-.debug_ranges   0x00000000      0x740
- .debug_ranges  0x00000000       0x20 Debug/main.o
- .debug_ranges  0x00000020       0x30 Debug/serial.o
- .debug_ranges  0x00000050       0x40 Debug/time.o
- .debug_ranges  0x00000090       0x18 Debug/watchdog_timer.o
- .debug_ranges  0x000000a8       0xd8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
- .debug_ranges  0x00000180      0x258 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
- .debug_ranges  0x000003d8       0xb0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
- .debug_ranges  0x00000488       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
- .debug_ranges  0x000004d0       0x78 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
- .debug_ranges  0x00000548       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
- .debug_ranges  0x00000580       0x18 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
- .debug_ranges  0x00000598       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
- .debug_ranges  0x000005d0       0x10 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
- .debug_ranges  0x000005e0      0x100 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
- .debug_ranges  0x000006e0       0x18 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
- .debug_ranges  0x000006f8       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+.debug_ranges   0x00000000      0x748
+ .debug_ranges  0x00000000       0x28 Debug/main.o
+ .debug_ranges  0x00000028       0x30 Debug/serial.o
+ .debug_ranges  0x00000058       0x40 Debug/time.o
+ .debug_ranges  0x00000098       0x18 Debug/watchdog_timer.o
+ .debug_ranges  0x000000b0       0xd8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+ .debug_ranges  0x00000188      0x258 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_ranges  0x000003e0       0xb0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+ .debug_ranges  0x00000490       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_ranges  0x000004d8       0x78 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_ranges  0x00000550       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
+ .debug_ranges  0x00000588       0x18 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
+ .debug_ranges  0x000005a0       0x38 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_ranges  0x000005d8       0x10 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
+ .debug_ranges  0x000005e8      0x100 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_ranges  0x000006e8       0x18 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_ranges  0x00000700       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
 
-.debug_line     0x00000000     0x24ff
- .debug_line    0x00000000      0x102 Debug/main.o
- .debug_line    0x00000102      0x180 Debug/serial.o
- .debug_line    0x00000282       0xb3 Debug/time.o
- .debug_line    0x00000335       0x5d Debug/watchdog_timer.o
- .debug_line    0x00000392      0x2f7 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
- .debug_line    0x00000689      0x741 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
- .debug_line    0x00000dca      0x221 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
- .debug_line    0x00000feb      0x1ad /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
- .debug_line    0x00001198      0x644 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
- .debug_line    0x000017dc      0x304 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
- .debug_line    0x00001ae0      0x16a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
- .debug_line    0x00001c4a       0xd2 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
- .debug_line    0x00001d1c       0xdc /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
- .debug_line    0x00001df8       0x95 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
- .debug_line    0x00001e8d      0x2bb /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
- .debug_line    0x00002148       0x96 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
- .debug_line    0x000021de      0x18a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
- .debug_line    0x00002368       0xde /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
- .debug_line    0x00002446       0xb9 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
+.debug_line     0x00000000     0x251d
+ .debug_line    0x00000000      0x120 Debug/main.o
+ .debug_line    0x00000120      0x180 Debug/serial.o
+ .debug_line    0x000002a0       0xb3 Debug/time.o
+ .debug_line    0x00000353       0x5d Debug/watchdog_timer.o
+ .debug_line    0x000003b0      0x2f7 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+ .debug_line    0x000006a7      0x741 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_line    0x00000de8      0x221 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+ .debug_line    0x00001009      0x1ad /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_line    0x000011b6      0x644 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_line    0x000017fa      0x304 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
+ .debug_line    0x00001afe      0x16a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
+ .debug_line    0x00001c68       0xd2 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_line    0x00001d3a       0xdc /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
+ .debug_line    0x00001e16       0x95 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(init.o)
+ .debug_line    0x00001eab      0x2bb /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_line    0x00002166       0x96 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_line    0x000021fc      0x18a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cp15.o)
+ .debug_line    0x00002386       0xde /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_line    0x00002464       0xb9 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(exceptionhandler.o)
 
-.debug_str      0x00000000     0x1a5c
- .debug_str     0x00000000      0x103 Debug/main.o
-                                0x13e (size before relaxing)
- .debug_str     0x00000103       0xc7 Debug/serial.o
-                                0x1d0 (size before relaxing)
- .debug_str     0x000001ca       0xa1 Debug/time.o
-                                0x139 (size before relaxing)
- .debug_str     0x0000026b       0x3e Debug/watchdog_timer.o
-                                 0xca (size before relaxing)
- .debug_str     0x000002a9      0x316 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+.debug_str      0x00000000     0x1a94
+ .debug_str     0x00000000      0x13b Debug/main.o
+                                0x176 (size before relaxing)
+ .debug_str     0x0000013b       0xc7 Debug/serial.o
+                                0x1e7 (size before relaxing)
+ .debug_str     0x00000202       0xa1 Debug/time.o
+                                0x150 (size before relaxing)
+ .debug_str     0x000002a3       0x3e Debug/watchdog_timer.o
+                                 0xe1 (size before relaxing)
+ .debug_str     0x000002e1      0x316 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
                                 0x37a (size before relaxing)
- .debug_str     0x000005bf      0x899 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_str     0x000005f7      0x899 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
                                 0x973 (size before relaxing)
- .debug_str     0x00000e58      0x268 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+ .debug_str     0x00000e90      0x268 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
                                 0x332 (size before relaxing)
- .debug_str     0x000010c0      0x16a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_str     0x000010f8      0x16a /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
                                 0x293 (size before relaxing)
- .debug_str     0x0000122a      0x1a7 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_str     0x00001262      0x1a7 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
                                 0x2b0 (size before relaxing)
- .debug_str     0x000013d1      0x12e /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
+ .debug_str     0x00001409      0x12e /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
                                 0x192 (size before relaxing)
- .debug_str     0x000014ff       0x5f /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
+ .debug_str     0x00001537       0x5f /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
                                 0x12d (size before relaxing)
- .debug_str     0x0000155e       0xa8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_str     0x00001596       0xa8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
                                 0x1a7 (size before relaxing)
- .debug_str     0x00001606       0x50 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
+ .debug_str     0x0000163e       0x50 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
                                 0x11e (size before relaxing)
- .debug_str     0x00001656      0x2f7 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_str     0x0000168e      0x2f7 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
                                 0x389 (size before relaxing)
- .debug_str     0x0000194d       0x70 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_str     0x00001985       0x70 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
                                 0x13e (size before relaxing)
- .debug_str     0x000019bd       0x9f /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_str     0x000019f5       0x9f /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
                                 0x150 (size before relaxing)
 
 .comment        0x00000000       0x70
@@ -1013,22 +1016,22 @@ OUTPUT(Debug/lightBouncer.out elf32-littlearm)
  .ARM.attributes
                 0x0000041b       0x18 /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_dvmd_tls.o)
 
-.debug_frame    0x00000000     0x173c
- .debug_frame   0x00000000       0x60 Debug/main.o
- .debug_frame   0x00000060       0x98 Debug/serial.o
- .debug_frame   0x000000f8       0xc8 Debug/time.o
- .debug_frame   0x000001c0       0x48 Debug/watchdog_timer.o
- .debug_frame   0x00000208      0x2b4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
- .debug_frame   0x000004bc      0x778 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
- .debug_frame   0x00000c34      0x228 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
- .debug_frame   0x00000e5c      0x108 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
- .debug_frame   0x00000f64      0x1a8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
- .debug_frame   0x0000110c       0xa0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
- .debug_frame   0x000011ac       0x40 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
- .debug_frame   0x000011ec       0xb8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
- .debug_frame   0x000012a4       0x28 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
- .debug_frame   0x000012cc      0x314 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
- .debug_frame   0x000015e0       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
- .debug_frame   0x00001628       0xd4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
- .debug_frame   0x000016fc       0x20 /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
- .debug_frame   0x0000171c       0x20 /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)
+.debug_frame    0x00000000     0x1758
+ .debug_frame   0x00000000       0x7c Debug/main.o
+ .debug_frame   0x0000007c       0x98 Debug/serial.o
+ .debug_frame   0x00000114       0xc8 Debug/time.o
+ .debug_frame   0x000001dc       0x48 Debug/watchdog_timer.o
+ .debug_frame   0x00000224      0x2b4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(dmtimer.o)
+ .debug_frame   0x000004d8      0x778 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(uart_irda_cir.o)
+ .debug_frame   0x00000c50      0x228 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/drivers/Debug/libdrivers.a(watchdog.o)
+ .debug_frame   0x00000e78      0x108 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(consoleUtils.o)
+ .debug_frame   0x00000f80      0x1a8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/utils/Debug/libutils.a(uartStdio.o)
+ .debug_frame   0x00001128       0xa0 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(dmtimer.o)
+ .debug_frame   0x000011c8       0x40 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uart.o)
+ .debug_frame   0x00001208       0xb8 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(uartConsole.o)
+ .debug_frame   0x000012c0       0x28 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/beaglebone/platform/Debug/libplatform.a(watchdog.o)
+ .debug_frame   0x000012e8      0x314 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(interrupt.o)
+ .debug_frame   0x000015fc       0x48 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(startup.o)
+ .debug_frame   0x00001644       0xd4 /home/supriya/cmpt433/AM335X_StarterWare_02_00_01_01//binary/armv7a/gcc/am335x/system_config/Debug/libsystem_config.a(cpu.o)
+ .debug_frame   0x00001718       0x20 /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_udivsi3.o)
+ .debug_frame   0x00001738       0x20 /home/supriya/cmpt433/linaro-gcc/gcc-arm-none-eabi-4_7-2012q4/lib/gcc/arm-none-eabi/4.7.3//libgcc.a(_divsi3.o)

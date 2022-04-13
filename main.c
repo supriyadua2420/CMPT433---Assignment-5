@@ -11,6 +11,7 @@
 #include "timer.h"
 #include "watchdog_timer.h"
 #include "serial.h"
+#include "led.h"
 
 // My application's modules
 //#include "fakeTyper.h"
@@ -26,25 +27,28 @@ static void serialRxIsrCallback(uint8_t rxByte) {
 	s_rxByte = rxByte;
 }
 
-// static void doBackgroundSerialWork(void)
-// {
-// 	if (s_rxByte != 0) {
-// 		// Tell a joke
-// 		if (s_rxByte == '?') {
-// 			ConsoleUtilsPrintf("\nDisplaying help command\n");
-// 			//FakeTyper_setMessage(jokes[s_curJoke]);
-// 			//s_curJoke = (s_curJoke + 1) % NUM_JOKES;
-// 		}
-// 		else if(s_rxByte == 'x'){
-// 			ConsoleUtilsPrintf("\nGoing to hit the watchdog\n");
-// 		}
-// 		else if(s_rxByte >=0 && s_rxByte <=9){
-// 			ConsoleUtilsPrintf("\nChanging speed of LED now\n");
-// 		}
+ static void doBackgroundSerialWork(void)
+ {
+ 	if (s_rxByte != 0) {
+ 		if (s_rxByte == '?') {
+ 			ConsoleUtilsPrintf("\nDisplaying help command\n");
 
-// 		s_rxByte = 0;
-// 	}
-// }
+ 		}
+ 		else if(s_rxByte == 'x'){
+ 			ConsoleUtilsPrintf("\nGoing to hit the watchdog\n");
+ 		}
+ 		else if(s_rxByte >= '0' && s_rxByte <= '9'){
+ 			ConsoleUtilsPrintf("\nChanging speed of LED now\n");
+			 //LED STUFF
+			 //setLEDFast();
+ 		}
+		else{
+			ConsoleUtilsPrintf("\nCommand not recognised\n");
+		}
+
+ 		s_rxByte = 0;
+ 	}
+ }
 
 /******************************************************************************
  **              1.2 Print Reset Sources
@@ -83,6 +87,7 @@ int main(void)
 	Serial_init(serialRxIsrCallback);
 	Timer_init();
 	Watchdog_init();
+	initLEDS();
 
 	// Setup callbacks from hardware abstraction modules to application:
 	Serial_setRxIsrCallback(serialRxIsrCallback);
@@ -90,7 +95,7 @@ int main(void)
 
 	// Display startup messages to console:
 	ConsoleUtilsPrintf("\nWelcome message\n");
-	ConsoleUtilsPrintf("  Program by Supriya Dua\n");
+	ConsoleUtilsPrintf("  Program by Gaurav Modi and Supriya Dua\n");
 	
 	// print reset sources
 	get_reset_source();
@@ -99,7 +104,7 @@ int main(void)
 	while(1) {
 		// Handle background processing
 		
-		// doBackgroundSerialWork();
+		 doBackgroundSerialWork();
 		//FakeTyper_doBackgroundWork();
 		
 		// Timer ISR signals intermittent background activity.
