@@ -1,17 +1,11 @@
-// timers.c: Handle timer
-#include "soc_AM335x.h"
-#include "beaglebone.h"
-#include "error.h"
-#include "interrupt.h"
-#include "dmtimer.h"
+// timer.c: Handle timer
 
-//#include "serial.h"
 #include "timer.h"
 
 /******************************************************************************
  **                     TIMER TICK FUNCTIONS
  *******************************************************************************/
-#define TIMER_INITIAL_COUNT             (0xFFE00000)  // Some time that looks good.
+#define TIMER_INITIAL_COUNT             (0xFFE00000) // Some time that looks good.
 #define TIMER_RLD_COUNT                 TIMER_INITIAL_COUNT
 
 static void DMTimerAintcConfigure(void);
@@ -38,7 +32,8 @@ void Timer_init(void)
 	// Extra setup:
 	// ..Select clock
 	// ..Set prescaler
-	DMTimerPreScalerClkDisable(SOC_DMTIMER_2_REGS);
+	// DMTimerPreScalerClkDisable(SOC_DMTIMER_2_REGS);
+	DMTimerPreScalerClkEnable(SOC_DMTIMER_2_REGS, DMTIMER_PRESCALER_CLK_DIV_BY_8);
 
 	/* Enable the DMTimer interrupts */
 	DMTimerIntEnable(SOC_DMTIMER_2_REGS, DMTIMER_INT_OVF_EN_FLAG);

@@ -1,23 +1,28 @@
-// GPIO LED headers
-#include "soc_AM335x.h"
-#include "beaglebone.h"
-#include "gpio_v2.h"
-#include "hw_types.h"      // For HWREG(...) macro
-#include "watchdog_timer.h"
+/* 
+    led.c
+*/
+
 #include "led.h"
 
+// LED GPIO Macros
 #define LED_GPIO_BASE           (SOC_GPIO_1_REGS)
+#define NUM_PINS (4)
 #define LED0_PIN (21)
 #define LED1_PIN (22)
 #define LED2_PIN (23)
 #define LED3_PIN (24)
+// #define LED_MASK ((1<<LED0_PIN) | (1<<LED1_PIN) | (1<<LED2_PIN) | (1<<LED3_PIN))
 
-#define LED_MASK ((1<<LED0_PIN) | (1<<LED1_PIN) | (1<<LED2_PIN) | (1<<LED3_PIN))
+// Global variables
+static volatile _Bool s_isTimeToSwitchLED;
+static uint8_t curr_led;
+static _Bool curr_direction;	// true: forward, false: backward
 
-//#define DELAY_TIME 0x4000000		// Delay with MMU enabled
-#define DELAY_TIME 0x40000		// Delay witouth MMU and cache
+// Static function declarations
+static void flashLED(uint8_t led_pin);
+static void clearLED(uint8_t led_pin);
 
-void initLEDS(void)
+void LED_init(void)
 {
 	/* Enabling functional clocks for GPIO1 instance. */
 	GPIO1ModuleClkConfig();
@@ -44,47 +49,57 @@ void initLEDS(void)
 	GPIODirModeSet(LED_GPIO_BASE,
 			LED3_PIN,
 			GPIO_DIR_OUTPUT);
+
+	s_isTimeToSwitchLED = false;
+	curr_led = 0;
+	curr_direction = true;
 }
 
 
-void setLEDFast(void)
+void doBackgroundLEDWork(void)
 {
-	
-	int wdCounter = 0;
-	while(1)
-	{
-		// Flash each LED individually
-		for (int pin = LED0_PIN; pin <= LED3_PIN; pin++) {
-			/* Driving a logic HIGH on the GPIO pin. */
-			GPIOPinWrite(LED_GPIO_BASE,
-					pin,
-					GPIO_PIN_HIGH);
+	if (s_isTimeToSwitchLED){
 
-			busyWait(DELAY_TIME);
+		s_isTimeToSwitchLED = false;
+		clearLED(curr_led + LED0_PIN);
 
-			/* Driving a logic LOW on the GPIO pin. */
-			GPIOPinWrite(LED_GPIO_BASE,
-					pin,
-					GPIO_PIN_LOW);
-
-			busyWait(DELAY_TIME);
+		if (curr_direction){
+			if (curr_led == (NUM_PINS-1)){
+				curr_direction = !curr_direction;
+				curr_led --;
+			}else{
+				curr_led ++;
+			}
+		}else{
+			if (curr_led == 0){
+				curr_direction = !curr_direction;
+				curr_led ++;
+			}else{
+				curr_led --;
+			}
 		}
 
-		// Hit the watchdog (must #include "watchdog.h"
-		// Each time you hit the WD, must pass it a different number
-		// than the last time you hit it.
-		wdCounter++;
-		WatchdogTimerTriggerSet(SOC_WDT_1_REGS, wdCounter);
+		flashLED(curr_led + LED0_PIN);
 	}
 }
 
-
-
-void busyWait(volatile unsigned int count)
+void LED_notifyOnTimeIsr(void)
 {
-	while(count--)
-		;
+	s_isTimeToSwitchLED = true;
 }
 
-    
+// Flash a LED
+static void flashLED(uint8_t led_pin)
+{
+	ConsoleUtilsPrintf("Flash LED: %d\n", led_pin);
+	// HWREG(LED_GPIO_BASE + GPIO_DATAOUT) &= ~(1 << led_pin);
+	GPIOPinWrite(LED_GPIO_BASE, led_pin, GPIO_PIN_LOW);
+}
+
+// Clear all the LEDs:
+static void clearLED(uint8_t led_pin)
+{
+	// HWREG(LED_GPIO_BASE + GPIO_DATAOUT) |= (1 << led_pin);
+	GPIOPinWrite(LED_GPIO_BASE, led_pin, GPIO_PIN_HIGH);
+}    
 

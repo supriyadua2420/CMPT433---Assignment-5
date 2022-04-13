@@ -1,23 +1,29 @@
-// Fake Typing bare metal sample application
-// On the serial port, fakes
+/* 
+    Assignment 5: Bare Metal LED Flasher
 
-#include "consoleUtils.h"
+	By: Supriya Dua: <insert s.id> &
+		Gaurav Modi: 301263574
+	
+	April 11, 2022
+*/
+
 #include <stdint.h>
+#include "consoleUtils.h"
 
 // My hardware abstraction modules
 
-// #include "beaglebone.h"
 #include "hw_types.h"      // For HWREG(...) macro
 #include "timer.h"
 #include "watchdog_timer.h"
 #include "serial.h"
-#include "led.h"
 
 // My application's modules
-//#include "fakeTyper.h"
+#include "led.h"
+#include "joystick.h"
 
-#define PRM_DEV				0x44E00F00	// base
-#define PRM_RSTST_OFFSET	0x08		// offset
+// Internal Macro Defs
+#define PRM_DEV				(0x44E00F00)	// base
+#define PRM_RSTST_OFFSET	(0x08)		// offset
 
 /******************************************************************************
  **              SERIAL PORT HANDLING
@@ -27,23 +33,26 @@ static void serialRxIsrCallback(uint8_t rxByte) {
 	s_rxByte = rxByte;
 }
 
- static void doBackgroundSerialWork(void)
+static void doBackgroundSerialWork(void)
  {
  	if (s_rxByte != 0) {
  		if (s_rxByte == '?') {
- 			ConsoleUtilsPrintf("\nDisplaying help command\n");
-
+ 			ConsoleUtilsPrintf("\nCommands:\n");
+			ConsoleUtilsPrintf(" ?:\tDisplay this help message\n");
+			ConsoleUtilsPrintf(" 0-9:\tSet speed 0 (slow) to 9 (fast)\n");
+			ConsoleUtilsPrintf(" x:\tStop hitting the watchdog\n");
+			ConsoleUtilsPrintf(" JOY:\tUp (faster), Down (slower)\n");
  		}
  		else if(s_rxByte == 'x'){
- 			ConsoleUtilsPrintf("\nGoing to hit the watchdog\n");
+ 			ConsoleUtilsPrintf("\nNo longer hitting the watchdog.\n");
  		}
  		else if(s_rxByte >= '0' && s_rxByte <= '9'){
- 			ConsoleUtilsPrintf("\nChanging speed of LED now\n");
+ 			ConsoleUtilsPrintf("\nSetting LED speed to %c.\n", s_rxByte);
 			 //LED STUFF
 			 //setLEDFast();
  		}
 		else{
-			ConsoleUtilsPrintf("\nCommand not recognised\n");
+			ConsoleUtilsPrintf("\nCommand not recognised.\n");
 		}
 
  		s_rxByte = 0;
@@ -87,29 +96,29 @@ int main(void)
 	Serial_init(serialRxIsrCallback);
 	Timer_init();
 	Watchdog_init();
-	initLEDS();
+	LED_init();
+	Joystick_init();
 
 	// Setup callbacks from hardware abstraction modules to application:
 	Serial_setRxIsrCallback(serialRxIsrCallback);
-	//Timer_setTimerIsrCallback(FakeTyper_notifyOnTimeIsr);
+	Timer_setTimerIsrCallback(LED_notifyOnTimeIsr);
 
 	// Display startup messages to console:
 	ConsoleUtilsPrintf("\nWelcome message\n");
-	ConsoleUtilsPrintf("  Program by Gaurav Modi and Supriya Dua\n");
+	ConsoleUtilsPrintf("  Program by Supriya Dua and Gaurav Modi\n");
 	
-	// print reset sources
+	// Print reset sources
 	get_reset_source();
 
 	// Main loop:
 	while(1) {
 		// Handle background processing
-		
-		 doBackgroundSerialWork();
-		//FakeTyper_doBackgroundWork();
+		doBackgroundSerialWork();
+		doBackgroundLEDWork();
+		doBackgroundJoystickWork();
 		
 		// Timer ISR signals intermittent background activity.
 		if(Timer_isIsrFlagSet()) {
-			//ConsoleUtilsPrintf("  inside this block\n");
 			Timer_clearIsrFlag();
 			Watchdog_hit();
 		}

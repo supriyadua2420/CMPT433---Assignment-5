@@ -1,12 +1,5 @@
 // serial.c: Serial prompt for controlling application.
 
-#include "uart_irda_cir.h"
-#include "soc_AM335x.h"
-#include "interrupt.h"
-#include "beaglebone.h"
-#include "consoleUtils.h"
-#include "hw_types.h"
-#include <stdint.h>
 #include "serial.h"
 
 

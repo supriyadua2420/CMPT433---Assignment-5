@@ -1,10 +1,15 @@
 // timer.h:
 // Hardware abstraction module: The timer and its ISR functions
 
-
 #ifndef _TIMER_H_
 #define _TIMER_H_
 #include <stdbool.h>
+#include "soc_AM335x.h"
+#include "beaglebone.h"
+#include "error.h"
+#include "interrupt.h"
+#include "dmtimer.h"
+#include "consoleUtils.h"
 
 // Start the timer
 void Timer_init(void);
