@@ -11,24 +11,26 @@
 #define LED1_PIN (22)
 #define LED2_PIN (23)
 #define LED3_PIN (24)
-// #define LED_MASK ((1<<LED0_PIN) | (1<<LED1_PIN) | (1<<LED2_PIN) | (1<<LED3_PIN))
+#define UPPER_LIMIT_SPEED (9)
+#define LOWER_LIMIT_SPEED (0)
+#define DEFAULT_SPEED (5)
 
 // Global variables
-static volatile _Bool s_isTimeToSwitchLED;
-static uint8_t curr_led;
 static _Bool curr_direction;	// true: forward, false: backward
+static uint8_t curr_led;		// LED currently on
+static uint8_t speed;
+static uint32_t counter;
+static uint32_t period;
 
 // Static function declarations
 static void flashLED(uint8_t led_pin);
 static void clearLED(uint8_t led_pin);
+static uint32_t calculatePeriod(uint8_t new_speed);
 
 void LED_init(void)
 {
 	/* Enabling functional clocks for GPIO1 instance. */
 	GPIO1ModuleClkConfig();
-
-	/* Selecting GPIO1[23] pin for use. */
-	//GPIO1Pin23PinMuxSetup();
 
 	/* Enabling the GPIO module. */
 	GPIOModuleEnable(LED_GPIO_BASE);
@@ -50,19 +52,20 @@ void LED_init(void)
 			LED3_PIN,
 			GPIO_DIR_OUTPUT);
 
-	s_isTimeToSwitchLED = false;
-	curr_led = 0;
 	curr_direction = true;
+	curr_led = 0;
+	speed = DEFAULT_SPEED;
+	counter = 0;
+	period = calculatePeriod(speed);
 }
 
 
 void doBackgroundLEDWork(void)
 {
-	if (s_isTimeToSwitchLED){
-
-		s_isTimeToSwitchLED = false;
+	if (counter >= period){
 		clearLED(curr_led + LED0_PIN);
 
+		// pick the next LED to flash
 		if (curr_direction){
 			if (curr_led == (NUM_PINS-1)){
 				curr_direction = !curr_direction;
@@ -80,26 +83,52 @@ void doBackgroundLEDWork(void)
 		}
 
 		flashLED(curr_led + LED0_PIN);
+		counter = 0;
 	}
+}
+
+// Flashes at a given speed (0-9)
+void LED_setFlashSpeed(uint8_t new_speed)
+{
+	if (new_speed < LOWER_LIMIT_SPEED || new_speed > UPPER_LIMIT_SPEED) return;
+	period = calculatePeriod(new_speed);
+	speed = new_speed;
+}
+
+// Increase flash speed by one if possible
+void LED_incrementFlashSpeed(void)
+{
+	if (speed >= UPPER_LIMIT_SPEED) return;
+	period /= 2;
+	speed++;
+}
+
+// Decrease flash speed by one if possible
+void LED_decrementFlashSpeed(void)
+{
+	if (speed <= LOWER_LIMIT_SPEED) return;
+	period *= 2;
+	speed--;
 }
 
 void LED_notifyOnTimeIsr(void)
 {
-	s_isTimeToSwitchLED = true;
+	counter++;
 }
 
-// Flash a LED
+// Set LED bit
 static void flashLED(uint8_t led_pin)
 {
-	ConsoleUtilsPrintf("Flash LED: %d\n", led_pin);
-	// HWREG(LED_GPIO_BASE + GPIO_DATAOUT) &= ~(1 << led_pin);
-	GPIOPinWrite(LED_GPIO_BASE, led_pin, GPIO_PIN_LOW);
+	GPIOPinWrite(LED_GPIO_BASE, led_pin, GPIO_PIN_HIGH);
 }
 
-// Clear all the LEDs:
+// Clear LED bit
 static void clearLED(uint8_t led_pin)
 {
-	// HWREG(LED_GPIO_BASE + GPIO_DATAOUT) |= (1 << led_pin);
-	GPIOPinWrite(LED_GPIO_BASE, led_pin, GPIO_PIN_HIGH);
+	GPIOPinWrite(LED_GPIO_BASE, led_pin, GPIO_PIN_LOW);
 }    
 
+static uint32_t calculatePeriod(uint8_t new_speed)
+{
+	return (1 << (UPPER_LIMIT_SPEED - new_speed));
+}

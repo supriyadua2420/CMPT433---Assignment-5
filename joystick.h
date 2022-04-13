@@ -1,5 +1,5 @@
 /* 
-    joystick.h
+    joystick.h - Read joystick input in order to control LED flash period
 */
 
 #ifndef _JOYSTICK_H_
@@ -11,6 +11,7 @@
 #include "gpio_v2.h"
 #include "consoleUtils.h"
 #include "hw_types.h"      // For HWREG(...) macro
+#include "led.h"
 
 void Joystick_init(void);
 

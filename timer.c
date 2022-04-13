@@ -5,8 +5,11 @@
 /******************************************************************************
  **                     TIMER TICK FUNCTIONS
  *******************************************************************************/
-#define TIMER_INITIAL_COUNT             (0xFFE00000) // Some time that looks good.
-#define TIMER_RLD_COUNT                 TIMER_INITIAL_COUNT
+#define TIMER_TIMEOUT_S      	(0.01)
+#define TIMER_CLOCK          	(25000000L)
+#define TIMER_TIMEOUT_TICKS  	(TIMER_TIMEOUT_S * TIMER_CLOCK)
+#define TIMER_INITIAL_COUNT		((unsigned int)0xFFFFFFFF - TIMER_TIMEOUT_TICKS + 1)
+#define TIMER_RLD_COUNT			TIMER_INITIAL_COUNT
 
 static void DMTimerAintcConfigure(void);
 static void DMTimerSetUp(void);
@@ -32,8 +35,8 @@ void Timer_init(void)
 	// Extra setup:
 	// ..Select clock
 	// ..Set prescaler
-	// DMTimerPreScalerClkDisable(SOC_DMTIMER_2_REGS);
-	DMTimerPreScalerClkEnable(SOC_DMTIMER_2_REGS, DMTIMER_PRESCALER_CLK_DIV_BY_8);
+	DMTimerPreScalerClkDisable(SOC_DMTIMER_2_REGS);
+	// DMTimerPreScalerClkEnable(SOC_DMTIMER_2_REGS, DMTIMER_PRESCALER_CLK_DIV_BY_8);
 
 	/* Enable the DMTimer interrupts */
 	DMTimerIntEnable(SOC_DMTIMER_2_REGS, DMTIMER_INT_OVF_EN_FLAG);

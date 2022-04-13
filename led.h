@@ -1,5 +1,5 @@
 /* 
-    led.c
+    led.h - Interface to control LED flash interval 
 */
 
 #ifndef _LED_H_
@@ -18,5 +18,11 @@ void LED_init(void);
 void doBackgroundLEDWork(void);
 
 void LED_notifyOnTimeIsr(void);
+
+void LED_setFlashSpeed(uint8_t new_speed);
+
+void LED_incrementFlashSpeed(void);
+
+void LED_decrementFlashSpeed(void);
 
 #endif

@@ -18,15 +18,13 @@ struct pin_info_t {
     uint8_t pin;
     _Bool last_state;
 };
-
 struct pin_info_t JS_pins[NUM_PINS];
 
-// Internal function declarations
+// Static function declarations
 static _Bool readButton(uint32_t base, uint8_t pin, _Bool* last_state);
 
 void Joystick_init(void)
 {
-
 	// Enable GPIO clocks
 	GPIO0ModuleClkConfig();
 	GPIO1ModuleClkConfig();
@@ -40,7 +38,9 @@ void Joystick_init(void)
 
     for (uint8_t i = 0; i < NUM_PINS; i ++){
         GPIOModuleEnable(JS_pins[i].base);
-        GPIOModuleReset(JS_pins[i].base);
+        if (i != 1){    // messes with led init
+            GPIOModuleReset(JS_pins[i].base);
+        }
         GPIODirModeSet(JS_pins[i].base,
                     JS_pins[i].pin,
                     GPIO_DIR_INPUT);
@@ -56,22 +56,22 @@ void doBackgroundJoystickWork(void)
             switch(i)
             {
                 case (UP):
-                    // do stuff with LEDs
-                    ConsoleUtilsPrintf("JS Up\n");
+                    LED_incrementFlashSpeed();
                     break;
                 case (DOWN):
-                    // do stuff with LEDs
-                    ConsoleUtilsPrintf("JS Down\n");
+                    LED_decrementFlashSpeed();
                     break;
             }
         }
     }
 }
 
+// Returns true when joystick released
 static _Bool readButton(uint32_t base, uint8_t pin, _Bool* last_state)
 {
     _Bool curr_state = (GPIOPinRead(base, pin) == 0);
 
+    // checks if state has recently switched from pressed to released
     if (*last_state != curr_state){
         *last_state = curr_state;
         if (!curr_state){

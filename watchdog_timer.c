@@ -15,6 +15,8 @@
 #define WD_TIMEOUT_TICKS  (WD_TIMEOUT_S * WD_CLOCK)
 #define WD_RESET_VALUE    ((unsigned int)0xFFFFFFFF - WD_TIMEOUT_TICKS + 1)
 
+static _Bool stopHitting = false;
+
 void Watchdog_init()
 {
 	WatchdogTimer1ModuleClkConfig();
@@ -27,11 +29,18 @@ void Watchdog_init()
 
 void Watchdog_hit(void)
 {
-	static unsigned int triggerCounter = 0;
+	if (!stopHitting){
+		static unsigned int triggerCounter = 0;
 
-	// Hit the WD, giving it a new trigger each time to keep it from
-	// resetting the board.
-	triggerCounter++;
+		// Hit the WD, giving it a new trigger each time to keep it from
+		// resetting the board.
+		triggerCounter++;
 
-	WatchdogTimerTriggerSet(SOC_WDT_1_REGS, triggerCounter);
+		WatchdogTimerTriggerSet(SOC_WDT_1_REGS, triggerCounter);
+	}
+}
+
+void Watchdog_stopHitting(void)
+{
+	stopHitting = true;
 }
