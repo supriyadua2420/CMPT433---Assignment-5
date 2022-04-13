@@ -46,14 +46,13 @@ static void serialRxIsrCallback(uint8_t rxByte) {
 // 	}
 // }
 
-
 /******************************************************************************
  **              1.2 Print Reset Sources
  ******************************************************************************/
 void get_reset_source(void){
 	// read reset source register
-	uint32_t rst_src_reg_val = HWREG(PRM_DEV + PRM_RSTST_OFFSET);
-	ConsoleUtilsPrintf("Reset source (0x%x) = ", rst_src_reg_val);
+	uint8_t rst_src_reg_val = HWREG(PRM_DEV + PRM_RSTST_OFFSET);
+	ConsoleUtilsPrintf("Reset source (0x%02x) = ", rst_src_reg_val);
 
 	// print to serial port
 	if ((rst_src_reg_val & 0x01) == 0x01){ 
@@ -93,9 +92,8 @@ int main(void)
 	ConsoleUtilsPrintf("\nWelcome message\n");
 	ConsoleUtilsPrintf("  Program by Supriya Dua\n");
 	
-	// reset sources
+	// print reset sources
 	get_reset_source();
-	
 
 	// Main loop:
 	while(1) {
